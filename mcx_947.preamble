@@ -1,0 +1,8 @@
+# Cortex M33 
+- **platform:** FRDM MCX N947 
+- **test**: 
+```
+west twister --build-only -p frdm_mcxn947/mcxn947/cpu0 -T ../zephyr/tests/benchmarks/thread_metric
+west twister --test-only --device-testing --device-serial /dev/ttyACM3 --device-serial-baud 115200 --west-flash="--skip-rebuild" --west-runner=jlink -p frdm_mcxn947/mcxn947/cpu0 -T ../zephyr/tests/benchmarks/thread_metric --timeout-multiplier 0.33 -v
+```
+

@@ -1,0 +1,8 @@
+
+## Cortex M4
+- **platform:** nucleo F411RE
+- **test**:
+```
+west twister --build-only -p nucleo_f411re/stm32f411xe -T ../zephyr/tests/benchmarks/thread_metric
+west twister --test-only --device-testing --device-serial /dev/ttyACM3 --device-serial-baud 115200 --west-flash="--skip-rebuild" --west-runner=openocd -p nucleo_f411re/stm32f411xe -T ../zephyr/tests/benchmarks/thread_metric --timeout-multiplier 0.33 -v
+```
