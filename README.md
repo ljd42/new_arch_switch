@@ -4,8 +4,8 @@ This repo collects some testing results with the [new arch_switch()](https://git
 
 # Results:
 
-* [FRDM MCX N947](mcx_n947.md)
-* [NUCLEO F411RE](nucleo_f411re.md)
+* [FRDM MCX N947](mcx_n947/mcx_n947.md)
+* [NUCLEO F411RE](nucleo_f411re/nucleo_f411re.md)
 
 # Summary: 
 
