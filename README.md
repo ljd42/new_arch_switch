@@ -6,6 +6,7 @@ This repo collects some testing results with the [new arch_switch()](https://git
 
 * [FRDM MCX N947](mcx_n947/mcx_n947.md)
 * [NUCLEO F411RE](nucleo_f411re/nucleo_f411re.md)
+* [STM32H750B-DK](stm32h750b_dk/stm32h750b_dk.md)
 
 # Summary: 
 
