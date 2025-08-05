@@ -1,6 +1,30 @@
 
 ## Cortex M4
+
 - **platform:** nucleo F411RE
+
+Latest Results 
+---
+
+- generated on:  2025-08-05 16:59:02 UTC
+- platform    : nucleo_f411re_stm32f411xe
+- main version: v4.2.0-965-g96d062add8c5
+- switch_arch : v4.2.0-783-g4cbbeb362890
+
+| Test | ref (main) | new arch_switch | Improvement |
+|:-----|-----------:|----------------:|:-----------:|
+|TM_BASIC|234,275 <br> 234,242 <br> 234,242|234,274 <br> 234,241 <br> 234,241|+0.0%|
+|TM_COOPERATIVE|14,547,589 <br> 14,546,593 <br> 14,546,594|15,826,406 <br> 15,825,327 <br> 15,825,323|+8.8%|
+|TM_INTERRUPT|4,983,359 <br> 4,982,766 <br> 4,982,766|4,357,588 <br> 4,357,069 <br> 4,357,069|-12.6%|
+|TM_INTERRUPT_PREEMPTION|2,238,064 <br> 2,237,726 <br> 2,237,726|2,500,325 <br> 2,499,948 <br> 2,499,948|+11.7%|
+|TM_MEMORY_ALLOCATION|22,680,503 <br> 22,677,936 <br> 22,677,935|22,680,378 <br> 22,677,814 <br> 22,677,814|+0.0%|
+|TM_MESSAGE|11,744,846 <br> 11,743,485 <br> 11,743,484|11,841,314 <br> 11,839,941 <br> 11,839,940|+0.8%|
+|TM_PREEMPTIVE|10,099,621 <br> 10,098,367 <br> 10,098,367|10,543,155 <br> 10,541,846 <br> 10,541,849|+4.4%|
+|TM_SYNCHRONIZATION|32,004,716 <br> 32,000,259 <br> 32,000,259|32,004,533 <br> 32,000,077 <br> 32,000,078|+0.0%|
+
+Older Results (from 04 August 2025)
+---
+
 - **test**:
 ```
 west twister --build-only -p nucleo_f411re/stm32f411xe -T ../zephyr/tests/benchmarks/thread_metric
