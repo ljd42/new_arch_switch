@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import argparse
+from datetime import datetime, UTC
 import os
 import re
 import statistics
@@ -26,7 +27,7 @@ class LogParser:
         m = re.match(r"\s+", line)
         if m:
             return self.parse_measurement
-        
+
         # match: "**** Thread-Metric (TEST_NAME) **** Relative Time: (TIME)"
         m = re.match(r"(.*) Thread-Metric(.+) Relative Time:\s*[0-9]+(.*)", line)
         if m:
@@ -109,7 +110,10 @@ def create_report(ref, newer):
         print(f"twister tests do not match: {r1.keys()} != {r2.keys()}")
         return
 
-    print(f"platform: {p1}\n")
+    print("- generated on: ", datetime.now(UTC).strftime("%Y-%m-%d %H:%M:%S"), "UTC")
+    print(f"- platform    : {p1}")
+    print(f"- main version: {r1['basic'].zephyr_version}")
+    print(f"- switch_arch : {r2['basic'].zephyr_version}\n")
     print("| Test | ref (main) | new arch_switch | Improvement |")
     print("|:-----|-----------:|----------------:|:-----------:|")
 
@@ -127,7 +131,7 @@ def create_report(ref, newer):
             err_report.append("".join(r2[k].errors))
             errnum += 1
         else:
-            ratio = round(statistics.mean(new_meas) / statistics.mean(ref_meas), 3)-1
+            ratio = round(statistics.mean(new_meas) / statistics.mean(ref_meas), 3) - 1
             print(f"{ratio*100:+.1f}%|")
 
     for n, err in enumerate(err_report, 1):
