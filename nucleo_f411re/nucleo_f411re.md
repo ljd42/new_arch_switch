@@ -3,7 +3,27 @@
 
 - **platform:** nucleo F411RE
 
-Latest Results 
+Latest Results:
+---
+
+- generated on:  2025-08-14 15:13:08 UTC
+- platform    : nucleo_f411re_stm32f411xe
+- main version: v4.2.0-1514-g965bcd6312e3
+- switch_arch : v4.2.0-1499-g3f22f72a2789
+
+| Test | ref (main) | new arch_switch | Improvement |
+|:-----|-----------:|----------------:|:-----------:|
+|TM_BASIC|234,274 <br> 234,243 <br> 234,242|234,274 <br> 234,241 <br> 234,242|+0.0%|
+|TM_COOPERATIVE|14,547,547 <br> 14,546,593 <br> 14,546,594|15,826,415 <br> 15,825,379 <br> 15,825,382|+8.8%|
+|TM_INTERRUPT|4,983,345 <br> 4,982,766 <br> 4,982,766|3,437,191 <br> 3,436,792 <br> 3,436,791|-31.0%|
+|TM_INTERRUPT_PREEMPTION|2,238,057 <br> 2,237,726 <br> 2,237,726|2,248,535 <br> 2,248,202 <br> 2,248,202|+0.5%|
+|TM_MEMORY_ALLOCATION|22,680,437 <br> 22,677,936 <br> 22,677,936|22,680,385 <br> 22,677,885 <br> 22,677,885|+0.0%|
+|TM_MESSAGE|11,744,812 <br> 11,743,485 <br> 11,743,484|11,744,768 <br> 11,743,440 <br> 11,743,440|+0.0%|
+|TM_PREEMPTIVE|10,099,592 <br> 10,098,367 <br> 10,098,367|10,543,170 <br> 10,541,893 <br> 10,541,892|+4.4%|
+|TM_SYNCHRONIZATION|32,004,624 <br> 32,000,258 <br> 32,000,259|32,004,539 <br> 32,000,176 <br> 32,000,177|+0.0%|
+
+
+Older Results from 05 August 2025
 ---
 
 - generated on:  2025-08-05 16:59:02 UTC
@@ -22,7 +42,7 @@ Latest Results
 |TM_PREEMPTIVE|10,099,621 <br> 10,098,367 <br> 10,098,367|10,543,155 <br> 10,541,846 <br> 10,541,849|+4.4%|
 |TM_SYNCHRONIZATION|32,004,716 <br> 32,000,259 <br> 32,000,259|32,004,533 <br> 32,000,077 <br> 32,000,078|+0.0%|
 
-Older Results (from 04 August 2025)
+Older Results from 04 August 2025
 ---
 
 - **test**:
